@@ -17,9 +17,9 @@ import static org.junit.Assert.*;
  *
  * @author Лена
  */
-public class MallardDuckTest {
+public class RubberDuckTest {
     
-    public MallardDuckTest() {
+    public RubberDuckTest() {
     }
     
     @BeforeClass
@@ -39,12 +39,12 @@ public class MallardDuckTest {
     }
 
     /**
-     * Test of display method, of class MallardDuck.
+     * Test of display method, of class RubberDuck.
      */
- @Test
+   @Test
     public void testDisplay() {
         System.out.println("display");
-        MallardDuck instance = new MallardDuck();
+        RubberDuck instance = new RubberDuck();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(baos);
         // IMPORTANT: Save the old System.out!
@@ -52,26 +52,24 @@ public class MallardDuckTest {
         // Tell Java to use your special stream
         System.setOut(ps);
         instance.display();
-        assertEquals("I am Mallard duck\r\n", baos.toString());
+        assertEquals("I am rubber duck\r\n", baos.toString());
         
         // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
     }
-    
-    
-    @Test
+     @Test
     public void testFly() {
         System.out.println("Fly");
-        MallardDuck duck = new MallardDuck();
+        RubberDuck duck = new RubberDuck();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(baos);
         // IMPORTANT: Save the old System.out!
         PrintStream old = System.out;
         // Tell Java to use your special stream
         System.setOut(ps);
-        duck.setFlyBehavior(new FlyWithWings());
+        duck.setFlyBehavior(new FlyNoWay());
         duck.performFly();
-        assertEquals("I am flying!\r\n", baos.toString());
+        assertEquals("Ican not flying\r\n", baos.toString());
         
         // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -79,7 +77,7 @@ public class MallardDuckTest {
        @Test
     public void testQuack() {
         System.out.println("Quack -Quack-Quack !");
-        MallardDuck duck = new MallardDuck();
+        RubberDuck duck = new RubberDuck();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(baos);
         // IMPORTANT: Save the old System.out!
@@ -93,5 +91,5 @@ public class MallardDuckTest {
         // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
     }
-      
+    
 }

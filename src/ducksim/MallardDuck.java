@@ -1,4 +1,4 @@
-/*
+﻿/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -6,17 +6,20 @@ package ducksim;
 
 /**
  *
- * @author stud_6
+ * @author Лена
  */
-public class MallardDuck extends Duck{
+public class MallardDuck extends Ducksim{
+    public MallardDuck() {
+    flyBehavior = new FlyWithWings();
 
-//    public MallardDuck() {
-//        flyBehavior = new FlyWithWings();
-//    }
+    quackBehavior = new Quack();
     
+    }    
+
     @Override
     public void display() {
-        System.out.println("I'm Mallard Duck");
+      System.out.println("I am Mallard duck");
     }
-    
+
+   
 }

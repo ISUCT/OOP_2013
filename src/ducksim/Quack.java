@@ -8,9 +8,9 @@ package ducksim;
  *
  * @author Лена
  */
-public class FlyNoWay implements FlyBehavior{
-    @Override
-    public void fly(){
-        System.out.println("Ican not flying");
+
+public class Quack implements QuackBehavior {
+    public void Quack(){
+        System.out.println("Quack -Quack-Quack !");
+}   
 }
-}  
