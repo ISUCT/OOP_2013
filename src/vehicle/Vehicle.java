@@ -1,23 +1,17 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package vehicle;
 
-/**
- *
- * @author stud_6
- */
-public class Vehicle {
+public abstract class Vehicle {
 
-    DriveInForest driveInForest;
+    DriveinForest driveInForest;
     Attack attackBehavior;
+    
+    public abstract void look ();
     
     public void forward () {
         System.out.println ("Еду вперед");
     }
     public void turnToTheRight () {
-        System.out.print("Поворачиваю направо");
+        System.out.println("Поворачиваю направо");
     }
     
     public void turnToTheLeft () {
@@ -32,7 +26,7 @@ public class Vehicle {
         this.attackBehavior = typeOfAttack;
     }
     
-    public void setDriveInForest (DriveInForest typeOfDrive) {
+    public void setDriveInForest (DriveinForest typeOfDrive) {
         this.driveInForest = typeOfDrive;
     } 
     
@@ -43,9 +37,34 @@ public class Vehicle {
     public void performDriveInForest () {
         driveInForest.driveInForest();
     }
-    
+
     public static void main(String[] args) {
         // TODO code application logic here
-        
+    QuadBike quadBike = new QuadBike ();
+    Panzer panzer = new Panzer ();
+    
+    quadBike.look();
+    quadBike.setAttack(new NoAttack ());
+    quadBike.performAttack();
+    quadBike.forward();
+    quadBike.turnToTheLeft();
+    quadBike.turnToTheRight();
+    quadBike.setDriveInForest(new BypassTrees());
+    quadBike.performDriveInForest();
+    quadBike.stop();
+    
+    panzer.look();
+    panzer.setAttack(new AttackByCannon());
+    panzer.performAttack();
+    panzer.forward();
+    panzer.turnToTheLeft();
+    panzer.turnToTheRight();
+    panzer.setDriveInForest(new DriveThroughtTrees());
+    panzer.performDriveInForest();
+    panzer.stop();
+    // The end :)
+    
+    
+    
     }
 }
