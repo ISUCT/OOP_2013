@@ -4,10 +4,21 @@
  */
 package Mouse;
 
+
 /**
  *
  * @author stud_6
  */
-public class Forestmouse {
+public class Forestmouse extends Mouse {
+
+	public Forestmouse(){
+	    squeakBehavior = new NoSqueak();	    	    
+	}
+	
+	@Override
+	public void display() {
+		System.out.println("Я лесная мышь");
+		
+	}
     
 }

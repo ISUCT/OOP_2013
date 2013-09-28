@@ -8,6 +8,20 @@ package Mouse;
  *
  * @author stud_6
  */
-public class Stripedmouse {
+public class Stripedmouse extends Mouse {
+
+	public Stripedmouse(){
+		 squeakBehavior = new Squeak();	
+	}
+	
+	@Override
+	public void display() {
+		
+			System.out.println("Я какая-то мышь");
+		
+				
+	}
+
+	
     
 }

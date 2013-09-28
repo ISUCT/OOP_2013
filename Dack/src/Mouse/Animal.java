@@ -8,6 +8,7 @@ package Mouse;
  *
  * @author stud_6
  */
-public class Animal {
-    
+public abstract class Animal {
+
+	  public abstract void display();
 }
