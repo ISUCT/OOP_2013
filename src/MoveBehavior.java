@@ -2,13 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ducksim;
+package MyMars;
 
 /**
  *
- * @author stud_6
+ * @author михаил
  */
-public interface QuackBehavior {
-    public void Quack();
-    
+public interface MoveBehavior {
+    public void move();
 }
