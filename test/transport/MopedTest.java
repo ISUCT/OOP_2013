@@ -1,8 +1,8 @@
-﻿/*
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ducksim;
+package transport;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -15,11 +15,11 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Лена
+ * @author Елена
  */
-public class RubberDuckTest {
+public class MopedTest {
     
-    public RubberDuckTest() {
+    public MopedTest() {
     }
     
     @BeforeClass
@@ -39,12 +39,12 @@ public class RubberDuckTest {
     }
 
     /**
-     * Test of display method, of class RubberDuck.
+     * Test of display method, of class Moped.
      */
-   @Test
+@Test
     public void testDisplay() {
         System.out.println("display");
-        RubberDuck instance = new RubberDuck();
+        Moped instance = new Moped();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(baos);
         // IMPORTANT: Save the old System.out!
@@ -52,44 +52,42 @@ public class RubberDuckTest {
         // Tell Java to use your special stream
         System.setOut(ps);
         instance.display();
-        assertEquals("I am rubber duck\r\n", baos.toString());
-        
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-    }
-     @Test
-    public void testFly() {
-        System.out.println("Fly");
-        RubberDuck duck = new RubberDuck();
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(baos);
-        // IMPORTANT: Save the old System.out!
-        PrintStream old = System.out;
-        // Tell Java to use your special stream
-        System.setOut(ps);
-        duck.setFlyBehavior(new FlyNoWay());
-        duck.performFly();
-        assertEquals("Ican not flying\r\n", baos.toString());
-        
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-    }
-       @Test
-    public void testQuack() {
-        System.out.println("Quack -Quack-Quack !");
-        RubberDuck duck = new RubberDuck();
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(baos);
-        // IMPORTANT: Save the old System.out!
-        PrintStream old = System.out;
-        // Tell Java to use your special stream
-        System.setOut(ps);
-        duck.setQuackBehavior(new Quack());
-        duck.performQuack();
-        assertEquals("Quack -Quack-Quack !\r\n", baos.toString());
+        assertEquals("It is Moped\r\n", baos.toString());
         
         // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
     }
     
+@Test
+    public void testDrive() {
+        System.out.println("I am driving!");
+        Moped instance = new Moped();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        PrintStream ps = new PrintStream(baos);
+        // IMPORTANT: Save the old System.out!
+        //PrintStream old = System.out;
+        // Tell Java to use your special stream
+        System.setOut(ps);
+        instance.drive();
+        assertEquals("I am driving!\r\n", baos.toString());
+        
+        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+    }
+    @Test
+    public void testSound() {
+        System.out.println("Bip-Bip-Bip");
+        Moped instance = new Moped();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        PrintStream ps = new PrintStream(baos);
+        // IMPORTANT: Save the old System.out!
+        //PrintStream old = System.out;
+        // Tell Java to use your special stream
+        System.setOut(ps);
+        instance.sound();
+        assertEquals("Bip-Bip-Bip\r\n", baos.toString());
+        
+        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+    }
 }

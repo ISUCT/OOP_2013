@@ -1,8 +1,8 @@
-﻿/*
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ducksim;
+package transport;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -15,12 +15,11 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Лена
+ * @author Елена
  */
-public class RedHeadDuckTest {
-    private Object instance;
+public class CarTest {
     
-    public RedHeadDuckTest() {
+    public CarTest() {
     }
     
     @BeforeClass
@@ -40,46 +39,12 @@ public class RedHeadDuckTest {
     }
 
     /**
-     * Test of display method, of class RedHeadDuck.
+     * Test of display method, of class Car.
      */
-    @Test
- public void testFly() {
-        System.out.println("Fly");
-        RedHeadDuck duck= new RedHeadDuck();
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(baos);
-        
-       //IMPORTANT: Save the old System.out!
-     PrintStream old = System.out;
-     // Tell Java to use your special stream
-     System.setOut(ps);
-     duck.setFlyBehavior(new FlyWithWings());
-     duck.performFly();
-     assertEquals("I am flying!\r\n", baos.toString());
-     
-     
-    }
-         @Test
-    public void testQuack() {
-        System.out.println("Quack -Quack-Quack !");
-        RedHeadDuck duck = new RedHeadDuck();
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(baos);
-        // IMPORTANT: Save the old System.out!
-        PrintStream old = System.out;
-        // Tell Java to use your special stream
-        System.setOut(ps);
-        duck.setQuackBehavior(new Quack());
-        duck.performQuack();
-        assertEquals("Quack -Quack-Quack !\r\n", baos.toString());
-        
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-    }
-          @Test
+@Test
     public void testDisplay() {
         System.out.println("display");
-        RedHeadDuck instance = new RedHeadDuck();
+        Car instance = new Car();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(baos);
         // IMPORTANT: Save the old System.out!
@@ -87,10 +52,42 @@ public class RedHeadDuckTest {
         // Tell Java to use your special stream
         System.setOut(ps);
         instance.display();
-        assertEquals("I am RedHead duck\r\n", baos.toString());
+        assertEquals("It is Car\r\n", baos.toString());
         
         // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
     }
     
+@Test
+    public void testDrive() {
+        System.out.println("I am driving!");
+        Car instance = new Car();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        PrintStream ps = new PrintStream(baos);
+        // IMPORTANT: Save the old System.out!
+        //PrintStream old = System.out;
+        // Tell Java to use your special stream
+        System.setOut(ps);
+        instance.drive();
+        assertEquals("I am driving!\r\n", baos.toString());
+        
+        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+    }
+    @Test
+    public void testSound() {
+        System.out.println("Bip-Bip-Bip");
+        Car instance = new Car();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        PrintStream ps = new PrintStream(baos);
+        // IMPORTANT: Save the old System.out!
+        //PrintStream old = System.out;
+        // Tell Java to use your special stream
+        System.setOut(ps);
+        instance.sound();
+        assertEquals("Bip-Bip-Bip\r\n", baos.toString());
+        
+        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+    }
 }

@@ -1,15 +1,13 @@
-﻿/*
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ducksim;
+package transport;
 
 /**
  *
- * @author Лена
+ * @author Елена
  */
-public interface QuackBehavior {
-    public void Quack();
-    
+public interface SoundBehavior {
+      public void Sound ();
 }
-
