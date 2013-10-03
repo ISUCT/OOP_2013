@@ -4,15 +4,9 @@
  */
 package ducksim;
 
-/**
- *
- * @author stud_6
- */
 public class FlyNoWay implements FlyBehavior{
-
     @Override
-    public void fly() {
-        System.out.println("No way");
-    }
-    
+    public void fly(){
+        System.out.println("Я не умею летать");
+}
 }
