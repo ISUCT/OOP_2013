@@ -9,50 +9,53 @@ import static org.junit.Assert.*;
 import java.io.PrintStream;
 import java.io.ByteArrayOutputStream;
 
-public class ReadheadduckTest {
+
+public class BelgianTigerTest {
     
-    public ReadheadduckTest(){
-        
+    public BelgianTigerTest() {
     }
     
+   
     @Test
     public void testDisplay() {
         System.out.println("display");
-        RedheadDack instance = new RedheadDack();
+        BelgianTiger instance = new BelgianTiger();
         ByteArrayOutputStream ba = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(ba);
         System. setOut(ps);
         instance.display();
-        assertEquals("Я красноголовая уточка\r\n",ba.toString());
+        assertEquals("Я бельгийский тигр\r\n",ba.toString());
             }
      @Test
-    public void testFly() {
+    public void testGrowl() {
         System.out.println("Fly");
-        ReadheadDack_1 instance = new ReadheadDack_1();
+        BelgianTiger instance = new BelgianTiger();
         ByteArrayOutputStream ba = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(ba);
         System. setOut(ps);
-        instance.performFly();
-        assertEquals("Я летаю!\r\n",ba.toString());
+        instance.performGrowl();
+        assertEquals("Я рычу!\r\n",ba.toString());
 }
      @Test
-    public void testSwim() {
-        System.out.println("Swim");
-        RedheadDack instance = new RedheadDack();
+    public void testRun() {
+        System.out.println("Run");
+        BelgianTiger instance = new BelgianTiger();
         ByteArrayOutputStream ba = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(ba);
         System. setOut(ps);
-        instance.swim();
-        assertEquals("Я плаваю!\r\n",ba.toString());
+        instance.run();
+        assertEquals("Я бегуууу!\r\n",ba.toString());
 }
      @Test
-    public void testQuack() {
-        System.out.println("Quack");
-        RedheadDack instance = new RedheadDack();
+    public void testEat() {
+        System.out.println("Eat");
+        BelgianTiger instance = new BelgianTiger();
         ByteArrayOutputStream ba = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(ba);
         System. setOut(ps);
-        instance.performQuack();
-        assertEquals("Кряяяяяяяяяяяяк!\r\n",ba.toString());
+        instance.performEat();
+        assertEquals("Я ем!\r\n",ba.toString());
 }
 }
+        
+       

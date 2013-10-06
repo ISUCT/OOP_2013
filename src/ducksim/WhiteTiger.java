@@ -10,14 +10,14 @@ package ducksim;
  */
 class ReadHeadDuck {
     
-public class ReadheadDuck extends Duck {
+public class ReadheadDuck extends Tiger {
    public ReadheadDuck(){
-       flyBehavior = new FlyWithWings();
-       quackBehavior = new Quack();
+       growlBehavior = new Growlwith();
+       runBehavior = new Run();
    }
     @Override
     public void display(){
-        System.out.println("Я красноголовая уточка");
+        System.out.println("Я белый тигр");
     }
 }
 }

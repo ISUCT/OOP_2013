@@ -4,12 +4,12 @@
  */
 package ducksim;
 
-public class MallardDuck extends Duck {
+public class BelgianTiger extends Tiger {
     
-    public MallardDuck() {
-    flyBehavior = new FlyWithWings();
+    public BelgianTiger() {
+    growlBehavior = new Growlwith();
 
-    quackBehavior = new Quack();
+    eatBehavior = new Eat();
     
     }    
     

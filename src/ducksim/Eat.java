@@ -4,9 +4,9 @@
  */
 package ducksim;
 
-public class Squeak implements SqueakBehavior {
-           public void squeak() {
-          System.out.println("Писк");
+public class Eat implements EatBehavior {
+           public void eat() {
+          System.out.println("Я ем");
     }
       
     

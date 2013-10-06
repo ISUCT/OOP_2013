@@ -4,6 +4,7 @@
  */
 package ducksim;
 
-public interface SqueakBehavior {
-    public void squeak();  
+public interface RunBehavior {
+    public void Run();
+    
 }

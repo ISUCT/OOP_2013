@@ -9,53 +9,50 @@ import static org.junit.Assert.*;
 import java.io.PrintStream;
 import java.io.ByteArrayOutputStream;
 
-
-public class MallardDackTest {
+public class WhiteTigerTest {
     
-    public MallardDackTest() {
+    public WhiteTigerTest(){
+        
     }
     
-   
     @Test
     public void testDisplay() {
         System.out.println("display");
-        MallardDuck instance = new MallardDuck();
+       WhiteTiger instance = new WhiteTiger();
         ByteArrayOutputStream ba = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(ba);
         System. setOut(ps);
         instance.display();
-        assertEquals("Я утка маллордовая\r\n",ba.toString());
+        assertEquals("Я белый тигр\r\n",ba.toString());
             }
      @Test
-    public void testFly() {
-        System.out.println("Fly");
-        MallardDuck instance = new MallardDuck();
+    public void testGrowl() {
+        System.out.println("Growl");
+        WhiteTiger instance = new WhiteTiger();
         ByteArrayOutputStream ba = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(ba);
         System. setOut(ps);
-        instance.performFly();
-        assertEquals("Я летаю!\r\n",ba.toString());
+        instance.performRun();
+        assertEquals("Я бегу!\r\n",ba.toString());
 }
      @Test
-    public void testSwim() {
-        System.out.println("Swim");
-        MallardDuck instance = new MallardDuck();
+    public void testEat() {
+        System.out.println("Eat");
+        WhiteTiger instance = new WhiteTiger();
         ByteArrayOutputStream ba = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(ba);
         System. setOut(ps);
-        instance.swim();
-        assertEquals("Я плаваю!\r\n",ba.toString());
+        instance.eat();
+        assertEquals("Я ем!\r\n",ba.toString());
 }
      @Test
-    public void testQuack() {
-        System.out.println("Quack");
-        MallardDuck instance = new MallardDuck();
+    public void testRun() {
+        System.out.println("Run");
+        WhiteTiger instance = new WhiteTiger();
         ByteArrayOutputStream ba = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(ba);
         System. setOut(ps);
-        instance.performQuack();
-        assertEquals("Кряяяяяяяяяяяяк!\r\n",ba.toString());
+        instance.performRun();
+        assertEquals("Я бегууу!\r\n",ba.toString());
 }
 }
-        
-       

@@ -4,7 +4,6 @@
  */
 package ducksim;
 
-public interface QuackBehavior {
-    public void Quack();
-    
+public interface EatBehavior {
+    public void eat();  
 }
