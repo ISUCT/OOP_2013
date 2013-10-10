@@ -6,13 +6,11 @@ package ducksim;
 
 /**
  *
- * @author stud_6
+ * @author alyona
  */
 public class FlyWithWings implements FlyBehavior{
-
     @Override
-    public void fly() {
-        System.out.println("i can fly");
-    }
-    
+   public void fly(){
+    System.out.println("I'm flying");
+}
 }

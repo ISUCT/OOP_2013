@@ -6,17 +6,23 @@ package ducksim;
 
 /**
  *
- * @author stud_6
+ * @author alyona
  */
-public class MallardDuck extends Duck{
+public class MallardDuck extends Duck {
+    
+    public MallardDuck() {
+    flyBehavior = new FlyWithWings();
 
-//    public MallardDuck() {
-//        flyBehavior = new FlyWithWings();
-//    }
+    quackBehavior = new Quack();
+    
+    }    
     
     @Override
-    public void display() {
+    public void display(){
         System.out.println("I'm Mallard Duck");
     }
+
+   
     
 }
+

@@ -6,36 +6,56 @@ package ducksim;
 
 /**
  *
- * @author stud_6
+ * @author alyona
  */
 public abstract class Duck {
-FlyBehavior flyBehavior;    
+     FlyBehavior flyBehavior;
+     
+    QuackBehavior quackBehavior;
+    public void performFly(){
+        flyBehavior.fly();
+    }
     
-public void setFlyBehavior(FlyBehavior fB){
-    flyBehavior = fB;
-}
-
-public void performFly(){
-    flyBehavior.fly();
-}
-
-public abstract void display();
+    public void performQuack(){
+        quackBehavior.Quack();
+    }
     
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args){
         MallardDuck duck1 = new MallardDuck();
         duck1.display();
-        duck1.setFlyBehavior(new FlyWithWings());
         duck1.performFly();
-        duck1.setFlyBehavior(new FlyNoWay());
-        duck1.performFly();
+        duck1.quack();
+        duck1.swim();
+        duck1.performQuack();
+       
+        RedHeadDuck duck2 = new RedHeadDuck();
+        duck2.swim();
+        duck2.quack();
+        duck2.display(); 
+        duck2.performFly();
+        duck2.performQuack();
         
-        ReadHeadDuck duck2 = new ReadHeadDuck();
-        duck2.display();
-        
+        RubberDuck duck3 = new RubberDuck();
+        duck3.swim();
+        duck3.quack();
+        duck3.setFlyBehavior(new FlyNoWay());
+        duck3.display(); 
+        duck3.performFly();
+        duck3.performQuack();
         
     }
+    
+    public void quack() {
+        System.out.println("Quack-Quack");
+}
+    public void swim(){
+        System.out.println("I swim!");
+    }
+    public abstract void display();
+        public void  setFlyBehavior(FlyBehavior fb){
+            flyBehavior = fb;
+        }
+        public void setQuackBehavior(QuackBehavior qb){
+            quackBehavior = qb;
+        }
 }

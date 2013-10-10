@@ -6,13 +6,11 @@ package ducksim;
 
 /**
  *
- * @author stud_6
+ * @author alyona
  */
 public class FlyNoWay implements FlyBehavior{
-
     @Override
-    public void fly() {
-        System.out.println("No way");
-    }
-    
+    public void fly(){
+        System.out.println("I can't fly");
+}
 }

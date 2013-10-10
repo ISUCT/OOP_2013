@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author stud_6
+ * @author alyona
  */
 public class MallardDuckTest {
 
@@ -48,7 +48,7 @@ public class MallardDuckTest {
         System.setOut(ps);
         duck.setFlyBehavior(new FlyWithWings());
         duck.performFly();
-        assertEquals("i can fly\r\n", baos.toString());
+        assertEquals("I'm flying\r\n", baos.toString());
         
         // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");

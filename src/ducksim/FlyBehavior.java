@@ -6,9 +6,9 @@ package ducksim;
 
 /**
  *
- * @author stud_6
+ * @author alyona
  */
 public interface FlyBehavior {
     public void fly();
-    
+        
 }
