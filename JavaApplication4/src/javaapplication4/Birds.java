@@ -1,24 +1,30 @@
 package javaapplication4;
 
-public abstract class Birds {
-    
+import Observers.bird.Observer;
+import java.util.Observable;
+
+public abstract class Birds implements Observer {
     FlyBehavior flyBehavior;
     SoundBehavior soundBehavior;
     BirdBehavior birdBehavior;
-    SleepBehavior sleepBehavior;
+    private boolean fullness;
+ //  private String Weather;
+
+    
+    
+
+    
     public void performFly(){
         flyBehavior.fly();
     }
-    
+   
     public void performSound(){
         soundBehavior.Sound();
     }
     public void performBehavior(){
         birdBehavior.Behavior();
     }
-    public void performSleep(){
-        sleepBehavior.SleepBehavior();
-    }
+   
     
     public static void main(String[] args){
         Budgie Kesha = new Budgie();
@@ -26,20 +32,24 @@ public abstract class Birds {
         Kesha.performFly();
         Kesha.performSound();
         Kesha.performBehavior();
-        Kesha.performSleep();
         Kesha.setBirdBehavior(new CuteBird());
         Kesha.performBehavior();
         Kesha.setSoundBehavior(new Talk());
         Kesha.performSound();
-        Penguin Jora = new Penguin();
+        Kesha.update(true, Constants.SUNNY);
+        Canary Jora = new Canary();
         Jora.display();
+        Jora.update(false, Constants.RAINY);
         Jora.performSound();
         Jora.performFly();
         Jora.performBehavior();
+        
     }
     public void sound() {
         System.out.println("Чирик-чирик");
 }
+   
+    
     public abstract String display();
     public void setFlyBehavior (FlyBehavior fb){
         flyBehavior = fb;
@@ -47,10 +57,10 @@ public abstract class Birds {
     public void setSoundBehavior (SoundBehavior sb){
         soundBehavior = sb;
     }
-    public void setSleepBehavior (SleepBehavior sb){
-        sleepBehavior = sb;
-    }
+  
     public void setBirdBehavior (BirdBehavior bb){
         birdBehavior = bb;
     }
+    
+   
 }

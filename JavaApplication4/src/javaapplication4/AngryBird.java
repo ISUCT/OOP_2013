@@ -14,3 +14,4 @@ public class AngryBird implements BirdBehavior {
         System.out.println("Покусаю!");
 }   
 }
+
