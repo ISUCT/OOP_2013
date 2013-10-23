@@ -44,7 +44,7 @@ public class MallarDuckTest {
         System.setOut(ps);
         instance.performFly();
         
-        assertEquals ("I am flying!\r\n", ba.toString());
+        assertEquals ("я лечу!\r\n", ba.toString());
         
 }
 }
