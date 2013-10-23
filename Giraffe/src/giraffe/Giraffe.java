@@ -30,6 +30,7 @@ public abstract class Giraffe extends MammalAnimal{
         jim.performRun();
         jim.performBehavior();
         jim.setBehavior(new KindGiraffe());
+        
 //       
         
         NotTypicalGiraffe cim = new NotTypicalGiraffe();
