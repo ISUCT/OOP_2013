@@ -42,5 +42,13 @@ public abstract void display();
     t34.performMove();
     t34.performSpeak();
     t34.performShoot();
+        
+    Target target = new Target();
+    Tank ag14 = new Tank(target);
+    Robot bob = new Robot(target);
+    target.setMeasurements(35);
+    target.setMeasurements(27);
+    target.setMeasurements(20);
+   
     }
 }

@@ -1,14 +1,11 @@
-package patternobserver;
+package toys;
 
 import java.util.ArrayList;
 
-public class WeatherData implements Subject {
+public class Target implements Subject {
     private ArrayList observeres;
-    private float temperature;
-    private float humidity;
-    private float pressure;
-    
-    public WeatherData (){
+    private int distance;
+    public Target (){
         observeres = new ArrayList();
     }
     
@@ -29,17 +26,15 @@ public class WeatherData implements Subject {
     public void notifyObservers (){
         for (int i = 0; i < observeres.size(); i++){
             Observer observer = (Observer)observeres.get(i);
-            observer.update (temperature, humidity, pressure);
+            observer.update(distance);
         }
     }
-    public void measurementsChanged() {
+     public void measurementsChanged() {
         notifyObservers();
     }
-    public void setMeasurements (float temperature, float humidity, float pressure){
-        this.temperature = temperature;
-        this.humidity = humidity;
-        this.pressure = pressure;
+     
+     public void setMeasurements (int distance){
+        this.distance=distance;
         measurementsChanged ();
     }
-
 }

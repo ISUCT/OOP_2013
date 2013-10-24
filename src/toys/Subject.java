@@ -1,4 +1,4 @@
-package patternobserver;
+package toys;
 
 public interface Subject {
   public void registerObserver(Observer o);    
