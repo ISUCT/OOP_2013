@@ -1,18 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/C:/Users/home/Documents/NetBeansProjects/Feed/src/feed/Feed.java</file>
-        <file>file:/C:/Users/home/Documents/NetBeansProjects/Feed/src/feed/CokcatooDisplay.java</file>
-        <file>file:/C:/Users/home/Documents/NetBeansProjects/Feed/src/feed/FeedData.java</file>
-        <file>file:/C:/Users/home/Documents/NetBeansProjects/Feed/src/feed/MacawDisplay.java</file>
-        <file>file:/C:/Users/home/Documents/NetBeansProjects/Feed/src/feed/MicropsittaDisplay.java</file>
-        <file>file:/C:/Users/home/Documents/NetBeansProjects/Feed/src/feed/Observer.java</file>
-        <file>file:/C:/Users/home/Documents/NetBeansProjects/Feed/src/feed/ParrotsDisplay.java</file>
-        <file>file:/C:/Users/home/Documents/NetBeansProjects/Feed/src/feed/Subject.java</file>
-        <file>file:/C:/Users/home/Documents/NetBeansProjects/Feed/test/feed/CokcatooDisplayTest.java</file>
-        <file>file:/C:/Users/home/Documents/NetBeansProjects/Feed/test/feed/MacawDisplayTest.java</file>
-        <file>file:/C:/Users/home/Documents/NetBeansProjects/Feed/test/feed/MicropsittaDisplayTest.java</file>
-        <file>file:/C:/Users/home/Documents/NetBeansProjects/Feed/test/feed/ParrotsDisplayTest.java</file>
-    </open-files>
 </project-private>
