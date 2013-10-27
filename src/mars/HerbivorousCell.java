@@ -16,3 +16,6 @@ public class HerbivorousCell extends Mars {
     public String disply() {
         System.out.println("Yes, i`m a vegetarian");
         return "Yes, i`m a vegetarian";
+    }
+}
+    
