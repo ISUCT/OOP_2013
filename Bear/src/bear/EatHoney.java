@@ -12,7 +12,7 @@ package bear;
 
      @Override
     public void Eat() {
-      System.out.println("I like to eat the honey ))))  ");  
+      System.out.println("я люблю мёд!!! ");  
     }
     
 }

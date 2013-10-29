@@ -49,7 +49,7 @@ public class CircusBearTest {
         PrintStream ps=new PrintStream(ba);
         System.setOut(ps);
         instance.display();
-        assertEquals("I'm circus bear!!! \r\n",ba.toString());
+        assertEquals("Привет!я цирковой медведь!!! \r\n",ba.toString());
     }
     
    

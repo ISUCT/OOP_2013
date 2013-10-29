@@ -5,7 +5,7 @@ public class EatFish implements EatBehavior{
    
     @Override
     public void Eat() {
-        System.out.println("I eat only fish..... ");
+        System.out.println("я ем только рыбу!! ");
     }
     
 }

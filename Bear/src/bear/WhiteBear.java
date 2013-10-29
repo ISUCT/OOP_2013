@@ -1,7 +1,9 @@
 
 package bear;
 
-public class WhiteBear extends Bear {
+import observer.bear.Observer;
+
+public class WhiteBear extends Bear implements Observer{
     public WhiteBear() {
     sleepBehavior = new SleepNight();
     eatBehavior = new EatFish();
@@ -9,8 +11,15 @@ public class WhiteBear extends Bear {
 
     @Override
     public void display(){
-        System.out.println("I'm white bear! I'm from North");
+        System.out.println("Я белый медведь)я с Северного полюса");
     }
 
-    
+     @Override
+    public void updaTe(String season) {
+        if (season.equals(Constants.SPRING)) {
+          this.performSleep();  
+        }else{
+           sleepBehavior.Sleep(); 
+        }
+    }
 }

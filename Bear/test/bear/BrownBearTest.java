@@ -49,7 +49,7 @@ public class BrownBearTest {
         PrintStream ps=new PrintStream(ba);
         System.setOut(ps);
         instance.display();
-        assertEquals("I'm Russian brown bear!!!\r\n",ba.toString());
+        assertEquals("Я русский бурый медведь!!!\r\n",ba.toString());
        
     }
      @Test
@@ -60,6 +60,6 @@ public class BrownBearTest {
         PrintStream ps=new PrintStream(ba);
         System.setOut(ps);
         instance.performSleep();
-        assertEquals("I like to sleep at winter.....))))  \r\n",ba.toString());
+        assertEquals("Я люблю спать зимой....\r\n",ba.toString());
 }
 }

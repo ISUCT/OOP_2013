@@ -1,7 +1,9 @@
 
 package bear;
 
-public class BrownBear extends Bear {
+import observer.bear.Observer;
+
+public class BrownBear extends Bear implements Observer {
     
     public BrownBear() {
     sleepBehavior = new SleepWinter();
@@ -10,6 +12,15 @@ public class BrownBear extends Bear {
 
     @Override
     public void display() {
-        System.out.println("I'm Russian brown bear!!!");
+        System.out.println("Я русский бурый медведь!!!");
     }
+ @Override
+    public void updaTe(String season) {
+        if (season.equals(Constants.SPRING)) {
+          this.wake();  
+        }else{
+           sleepBehavior.Sleep(); 
+        }
+    }
+
 }

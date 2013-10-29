@@ -49,6 +49,6 @@ public class WhiteBearTest {
         PrintStream ps=new PrintStream(ba);
         System.setOut(ps);
         instance.display();
-        assertEquals("I'm white bear! I'm from North\r\n",ba.toString());
+        assertEquals("Я белый медведь)я с Северного полюса\r\n",ba.toString());
     }
 }

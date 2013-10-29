@@ -1,7 +1,9 @@
 
 package bear;
 
-public class CircusBear extends Bear {
+import observer.bear.Observer;
+
+public class CircusBear extends Bear implements Observer {
     public CircusBear(){
      
     sleepBehavior = new SleepNight();
@@ -10,8 +12,15 @@ public class CircusBear extends Bear {
 
     @Override
     public void display() {
-        System.out.println("I'm circus bear!!! ");
+        System.out.println("Привет!я цирковой медведь!!! ");
     }
-   
+    @Override
+    public void updaTe(String season) {
+        if (season.equals(Constants.SPRING)) {
+          this.performSleep();  
+        }else{
+           sleepBehavior.Sleep(); 
+        }
+    }
    
 }
