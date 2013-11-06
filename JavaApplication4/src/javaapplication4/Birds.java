@@ -1,19 +1,16 @@
 package javaapplication4;
 
 import Observers.bird.Observer;
-import java.util.Observable;
+import decorator.Additions;
+import decorator.Cell;
 
-public abstract class Birds implements Observer {
+public abstract class Birds extends Additions implements Observer  {
     FlyBehavior flyBehavior;
     SoundBehavior soundBehavior;
     BirdBehavior birdBehavior;
     private boolean fullness;
- //  private String Weather;
+    private String Weather;
 
-    
-    
-
-    
     public void performFly(){
         flyBehavior.fly();
     }
@@ -27,7 +24,9 @@ public abstract class Birds implements Observer {
    
     
     public static void main(String[] args){
-        Budgie Kesha = new Budgie();
+     
+        Birds Kesha = new Budgie();
+        Kesha = new Cell(Kesha);
         Kesha.display();
         Kesha.performFly();
         Kesha.performSound();
@@ -37,6 +36,8 @@ public abstract class Birds implements Observer {
         Kesha.setSoundBehavior(new Talk());
         Kesha.performSound();
         Kesha.update(true, Constants.SUNNY);
+        System.out.println(Kesha.getDescription());
+         
         Canary Jora = new Canary();
         Jora.display();
         Jora.update(false, Constants.RAINY);

@@ -9,11 +9,12 @@ import Observers.bird.Observer;
 public class Budgie extends Birds implements Observer {
     
     public Budgie() {
+    
     flyBehavior = new FlyWithWings();
     soundBehavior = new Sing();
     birdBehavior = new AngryBird();
-   
-    }    
+   } 
+    
      
     @Override
     public String display(){

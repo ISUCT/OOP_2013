@@ -10,7 +10,7 @@ import Observers.bird.Observer;
 public class Canary extends Birds implements Observer{
     
     public Canary() {
-    flyBehavior = new FlyNoWay();
+    flyBehavior = new FlyWithWings();
     soundBehavior = new MuteSound();
     birdBehavior = new CuteBird();
     
