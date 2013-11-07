@@ -2,14 +2,14 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package starbuzzCoffee;
+package pacecar;
 
 /**
  *
- * @author stud_6
+ * @author Юлия
  */
-public abstract class Beverage {
-    String description = "Unknown Beverage"; 
+public abstract class Automobile {
+    String description = "Unknown Automobile"; 
     public String getDescription() { 
     return description; 
     } 

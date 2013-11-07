@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package starbuzzCoffee;
+package pacecar;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -17,9 +17,9 @@ import static org.junit.Assert.*;
  *
  * @author Юлия
  */
-public class BeverageTest {
+public class AutomobileTest {
     
-    public BeverageTest() {
+    public AutomobileTest() {
     }
     
     @BeforeClass
@@ -37,13 +37,15 @@ public class BeverageTest {
     @After
     public void tearDown() {
     }
+
     /**
-     * Test of cost method, of class Beverage.
+     * Test of getDescription method, of class Automobile.
      */
-     @Test
+   
+@Test
     public void testCost() {
         System.out.println("cost");
-       Beverage my = new HouseBlend ();
+       Automobile my = new Car ();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(baos);
         // IMPORTANT: Save the old System.out!
@@ -60,7 +62,7 @@ public class BeverageTest {
      @Test
     public void testgetDescription() {
         System.out.println("Unknown Beverage");
-       Beverage my = new HouseBlend ();
+       Automobile my = new Car ();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(baos);
         // IMPORTANT: Save the old System.out!

@@ -2,12 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package starbuzzCoffee;
+package pacecar;
 
 /**
  *
- * @author stud_6
+ * @author Юлия
  */
-public abstract  class CondimentDecorator extends Beverage {
+public abstract  class CondimentDecorator extends Automobile {
     public abstract String getDescription () ;
 }
+
