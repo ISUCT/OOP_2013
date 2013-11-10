@@ -4,6 +4,9 @@
  */
 package giraffe;
 
+import giraffe.decorator.NewForm;
+import giraffe.decorator.Wings;
+
 /**
  *
  * @author Stud_6
@@ -26,17 +29,24 @@ public abstract class Giraffe extends MammalAnimal{
     public static void main(String[] args) {
         // TODO code application logic here
         TypicalGiraffe jim = new TypicalGiraffe();
+        
         jim.display();
         jim.performRun();
         jim.performBehavior();
         jim.setBehavior(new KindGiraffe());
-        
-//       
+              
+        //       
         
         NotTypicalGiraffe cim = new NotTypicalGiraffe();
         cim.display();
         cim.performRun();
         cim.performBehavior();
+        
+        NewForm jimmy = new Wings();
+        jimmy = new giraffe.decorator.Giraffe(jimmy);
+        System.out.println(jimmy.getDescription());
+        
+
        
     
         
