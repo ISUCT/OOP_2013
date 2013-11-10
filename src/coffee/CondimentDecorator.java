@@ -8,7 +8,7 @@ package starbuzz;
 
 /**
  *
- * @author nastyalobanova
+ * @author ilya_hp
  */
 public abstract class CondimentDecorator extends Beverage {
     public abstract String getDescription ();

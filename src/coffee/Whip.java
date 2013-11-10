@@ -8,7 +8,7 @@ package starbuzz;
 
 /**
  *
- * @author nastyalobanova
+ * @author ilya_hp
  */
 public class Whip extends CondimentDecorator{
     Beverage beverage;

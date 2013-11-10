@@ -8,7 +8,7 @@ package starbuzz;
 
 /**
  *
- * @author nastyalobanova
+ * @author ilya_hp
  */
 public class StarbuzzCoffee {
     public static void main (String args[]){
