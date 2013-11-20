@@ -2,17 +2,15 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ducksim;
+package utka;
 
 /**
  *
  * @author stud_6
  */
-public class FlyWithWings implements FlyBehavior{
-
+public class Quack implements QuackBehavior {
     @Override
-    public void fly() {
-        System.out.println("i can fly");
-    }
-    
+    public void Quack(){
+        System.out.println("QUACK!");
+}   
 }
