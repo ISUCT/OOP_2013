@@ -1,1 +1,4 @@
 /dist/
+/src/Dishes/build/
+/src/Dishes/dist/
+/src/Dishes/nbproject/private/
